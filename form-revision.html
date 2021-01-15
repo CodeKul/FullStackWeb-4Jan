@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Name,City,Gender,Email,PhoneNO,Submit,birth year,age -->
+    <h4>User Registration</h4>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" required><br><br>
+
+        <label for="birthyear">Birth year</label>
+        <input type="number" id="year"><br><br>
+
+        <label for="age">Age</label>
+        <input type="text" id="qwerty"><br><br>
+        <!-- <span id="display"></span> -->
+
+<p><time datetime="1/15/2021 03:45">datetime</time></p>
+        <label for="gender">Gender</label>
+        <input type="radio" name="one" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="one" id="female" value="female">
+        <label for="Female">Female</label><br><br>
+
+
+       <select>
+           <optgroup label="Maharashtra">
+           <option value="pune">Pune</option>
+           <option value="mumbai">Mumbai</option>
+           <option value="nasik">Nasik</option>
+        </optgroup>
+
+        <optgroup label="Gujrat">
+            <option value="pune">Ahmedabad</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="nasik">Nasik</option>
+         </optgroup>
+       </select><br><br>
+
+       <input type="email">
+       <input type="checkbox">
+       <input type="date">
+       <input type="datetime-local"><br>
+       <p id="datetime"></p><br>
+       <input type="time">
+       <input type="color"><br>
+       <input type="password"><br>
+       <input type="file">
+      
+       <label for="subscribe">Yes I want to subscribe</label><br><br>
+
+<input type="text" list="countries">
+       <datalist id="countries">
+           <option value="india">India</option>
+           <option value="USA">USA</option>
+           <option value="China">China</option>
+           <option value="Japan">Japan</option>
+        </datalist>
+
+        <textarea name="" id="" cols="20" rows="4"></textarea>
+        <input type="button" value="Submit" onclick="calculate()">
+        <input type="submit" value="save">
+    </form>
+
+    <script>
+        function calculate(){
+            var year = document.getElementById("year").value
+            var age = 2021 - year;
+            document.getElementById("qwerty").value=age
+            console.log(age)
+
+            var gender = document.getElementById("male").value
+            console.log(gender)
+
+            document.getElementById("datetime").innerHTML=new Date().getTime()
+
+        }
+    </script>
+</body>
+</html>

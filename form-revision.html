@@ -19,7 +19,7 @@
         <input type="text" id="qwerty"><br><br>
         <!-- <span id="display"></span> -->
 
-<p><time datetime="1/15/2021 03:45">datetime</time></p>
+        <p id="datetime"></p>
         <label for="gender">Gender</label>
         <input type="radio" name="one" id="male" value="male">
         <label for="male">Male</label>
@@ -67,18 +67,20 @@
     </form>
 
     <script>
-        function calculate(){
-            var year = document.getElementById("year").value
-            var age = 2021 - year;
-            document.getElementById("qwerty").value=age
-            console.log(age)
+        // function calculate(){
+        //     var year = document.getElementById("year").value
+        //     var age = 2021 - year;
+        //     document.getElementById("qwerty").value=age
+        //     console.log(age)
 
-            var gender = document.getElementById("male").value
-            console.log(gender)
+        //     var gender = document.getElementById("male").value
+        //     console.log(gender)
 
-            document.getElementById("datetime").innerHTML=new Date().getTime()
+        //     document.getElementById("datetime").innerHTML=new Date().toLocaleDateString()
 
-        }
+        // }
+
+        new Date()
     </script>
 </body>
 </html>

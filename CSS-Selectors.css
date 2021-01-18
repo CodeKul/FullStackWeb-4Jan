@@ -1,0 +1,66 @@
+/* h1 {
+  color: brown;
+  font-size: 30px;
+} */
+
+.heading {
+  color: peru;
+}
+
+#one {
+  color: saddlebrown;
+}
+
+#two {
+  color: darkred;
+}
+.heading1 {
+  color: purple;
+}
+* {
+  color: chocolate;
+  font-size: 40px;
+}
+
+/* #firstDiv p {
+  border: 3px solid black;
+  color: cadetblue;
+}
+
+div#firstDiv h1 {
+  background-color: beige;
+  color: crimson;
+}
+
+#firstDiv p > a {
+  color: darkmagenta;
+}
+
+.p-one {
+  color: darkslategray;
+} */
+
+/* Child selector */
+body > div > p {
+  color: forestgreen;
+}
+
+/* descendant selector */
+body div p {
+}
+
+/* Adjacent sibling */
+h1 + h1 {
+  border: 4px dashed black;
+}
+
+/* Adjacent sibling */
+h1 + p {
+  color: black;
+}
+
+/* General sibling */
+h1 ~ p {
+  color: indianred;
+  border: 4px dashed yellowgreen;
+}

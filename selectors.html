@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="CSS-Selectors.css"> -->
+    <style>
+        .class-one{
+            
+        }
+
+        span{
+
+        }
+
+        #id-one{
+
+        }
+
+    div > span{
+            color:cadetblue;        }
+    div>p>span{
+        color:red;
+    }
+
+    /* adjacent sibling */
+    p+span{
+        border: 4px solid black;
+    }
+    /* general sibling */
+    p~span{
+        border: 4px solid green;
+    }
+
+    /* pseudo classes 
+    a:link,visited,hover,focus,active*/
+    a:link{
+        color:red;
+    }
+    a:hover{
+        color:rebeccapurple;
+    }
+
+    a:active{
+        color:yellowgreen;
+    }
+
+input:focus{
+    background-color: rosybrown;
+}
+    li:only-child{
+        border: 1px solid blue;
+    }
+    li:nth-last-child(2){
+        color:peru;
+    }
+    p:nth-last-of-type(1){
+        color:purple;
+    }
+
+    /* pseudo elements
+    ::after,::before,::selection */
+
+    li::before{
+        content:url("bullet.PNG")
+    }
+
+    p::selection{
+        background-color: rosybrown;
+        color:brown;
+    }
+
+    
+
+    </style>
+</head>
+<body>
+   <div>
+       <span class="class-one" id="id-one">first span</span>
+       <span>second span</span>
+       <ul>
+           <li>only</li>
+       </ul>
+       <ul>
+           <li>one</li>
+           <li>two</li>
+           <li>3</li>
+           <li>4</li>
+           <li>5</li>
+       </ul>
+       <p>
+           <span>span inside p</span>
+           first paragraph</p>
+       <p>second paragraph</p>
+       <span>third span</span>
+        <span>fourth span</span>
+        <a href="https://www.wionews.com">Google</a>
+   </div>
+   <div class="divTwo">
+       <p>hello</p>
+   </div>
+   <div>
+    <p>hello world</p>
+</div>
+   <span>third span</span>
+   <input type="text">
+</body>
+</html>

@@ -55,9 +55,9 @@ input:focus{
     li:nth-last-child(2){
         color:peru;
     }
-    p:nth-last-of-type(1){
+    /* p:nth-last-of-type(1){
         color:purple;
-    }
+    } */
 
     /* pseudo elements
     ::after,::before,::selection */
@@ -70,8 +70,22 @@ input:focus{
         background-color: rosybrown;
         color:brown;
     }
+/* Attribute selectors */
+    /* [class^="cl"]{
+        color:cornflowerblue;
+    } */
 
-    
+    /* [class$="cl"]{
+        color:cornflowerblue;
+    } */
+
+    /* [class*="las"]{
+       border:2px solid black;
+    } */
+
+    [class~="class-one"]{
+        color:cornflowerblue;
+    }
 
     </style>
 </head>

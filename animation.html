@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: chocolate;
+            animation-name:move;
+            animation-duration:2s;
+            animation-delay:1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 2;
+            animation-direction:alternate-reverse;
+            animation-fill-mode: forwards;
+            
+            
+            position:relative;
+        }
+        div:hover{
+             animation-play-state: running; 
+        }
+        @keyframes  move{
+            /* from{background-color:chocolate;left:0;top:0}
+            to{background-color:green;left:200px;top:0} */
+
+            0%{
+                background-color:chocolate;left:0;top:0
+            }
+            25%{
+                background-color:red;left:200px;top:0
+            }
+            50%{
+                background-color:darkolivegreen;left:200px;top:200px
+            }
+            75%{
+                background-color:blue;left:0;top:200px
+            }
+            100%{
+                background-color:darkslateblue;left:0;top:0
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

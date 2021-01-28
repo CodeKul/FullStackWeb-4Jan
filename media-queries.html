@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* @media type-screen/print/speech/all and/or  */
+        /* @media screen and (min-width: 600px){
+            
+        } */
+
+        @media print{
+            .one{
+                color:red;
+            }
+            .two{
+                color:darkgreen;
+            }
+        }
+
+        /* @media (min-width:200px) and (max-width: 700px){
+            body{
+                background-color: black;
+                color:white;
+            }
+        } */
+
+        @media (orientation: portrait) and (max-width:300px){
+            div{
+                border:2px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, distinctio?</p>
+        <p class="two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem laboriosam, tempore quibusdam quia nihil est modi delectus quis similique dolor!</p>
+    </div>
+</body>
+</html>

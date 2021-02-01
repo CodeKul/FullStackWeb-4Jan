@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a =null;
+
+        a= 100.50
+        console.log(typeof(a))
+
+        var str1 = Number("100.5")
+
+        var str2 ='Hello' 
+        var str3 =`Hello ${typeof(a)}`
+
+        console.log(typeof(str1))
+
+        //Number, String , Array ,Object , Null,undefined
+
+        let numbers = [50,40,30]
+        numbers.push(100)
+        console.log(numbers[1])
+        for(let i = 0 ;i<numbers.length;i++){
+            
+            console.log(numbers[i])
+        }
+
+        // var employee = {
+        //     firstName :"Sucheta",
+        //     lastName : "XYZ",
+        //     city :"Pune",
+        // }
+
+        // console.log(employee.city)
+
+        var response = [
+            {
+                firstName :"Sucheta",
+            lastName : "XYZ",
+            city :"Pune",
+            },
+            {
+                firstName :"ABC",
+            lastName : "XYZ",
+            city :"Pune",
+            },
+            {
+                firstName :"PQR",
+            lastName : "XYZ",
+            city :"Pune",
+            }
+        ]
+
+        console.log(response[1])
+    </script>
+</body>
+</html>

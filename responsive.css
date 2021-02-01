@@ -10,7 +10,6 @@
 .columns {
   display: flex;
   justify-content: space-between;
-  margin: 15px;
 }
 
 .col-1 {
@@ -25,6 +24,7 @@
   background-color: black;
   color: whitesmoke;
   padding: 10px;
+  margin: 15px;
 }
 
 h1 {

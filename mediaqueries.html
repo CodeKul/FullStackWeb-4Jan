@@ -5,34 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-        /* @media type-screen/print/speech/all and/or  */
-        /* @media screen and (min-width: 600px){
-            
-        } */
+        @media screen and (min-width:200px) and (max-width: 600px) {
+          .one{
+              color:red;
+          }
+        }
 
-        @media print{
+        @media print {
             .one{
-                color:red;
+                color:green;
             }
             .two{
-                color:darkgreen;
+                color:red;
             }
         }
 
-        /* @media (min-width:200px) and (max-width: 700px){
+        @media (orientation:portrait){
             body{
-                background-color: black;
-                color:white;
-            }
-        } */
-
-        @media (orientation: portrait) and (max-width:300px){
-            div{
-                border:2px solid black;
+                background-color: indianred;
             }
         }
-    </style> 
+
+
+    </style>
 </head>
 <body>
     <div>

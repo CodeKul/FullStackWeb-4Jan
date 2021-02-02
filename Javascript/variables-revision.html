@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+       var number;  //declaration
+       var number = 100 //initializing
+       number = 200 //assignment
+
+       console.log(number)
+
+       let num;
+        num = 10
+       console.log(num)
+
+       const pi = 3.14;
+      
+    console.log(pi)
+
+    //Datatypes
+    //Number , String, Undefined ,null, boolean,
+    //Array,Object
+
+    var a;
+    console.log(a)
+
+    var a =null
+    console.log(a)
+
+    //true false 1 0
+    let isAwake = false
+    if(isAwake == false){
+        console.log("Awake")
+    }else{
+        console.log("Asleep")
+    }
+
+    //Array
+    let fruits=["apple","mango","pear"]
+    console.log(fruits[1])
+
+    let emp = {
+        firstName:"ABC",
+        city:"Pune",
+        salary:40000,
+        empDetails:function (){
+            console.log("First Name"+ emp.firstName)
+        }
+    }
+
+
+    emp.empDetails()
+
+    function add(){
+        let num1 =100
+        let num2 =200
+        console.log(num1+num2)
+    }
+
+    add()
+
+    let employees = [{
+        firstName:"ABC",
+        city:"Pune",
+        salary:40000,
+        hobbies:["Swimming","Reading"],
+        empDetails:function (){
+            console.log("First Name"+ emp.firstName)
+        }
+    },
+    {
+        firstName:"PQR",
+        city:"Pune",
+        salary:40000,
+        empDetails:function (){
+            console.log("First Name"+ emp.firstName)
+        }
+    },
+    {
+        firstName:"XYZ",
+        city:"Pune",
+        salary:40000,
+        empDetails:function (){
+            console.log("First Name"+ emp.firstName)
+        }
+    }
+]
+
+console.log(employees[0].hobbies)
+
+    </script>
+</body>
+</html>

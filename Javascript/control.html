@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 10
+        
+       // console.log(y)
+
+        console.log(x--) //post increment
+        console.log(x) 
+        console.log(++x) //pre increment
+
+        // if(x == 10){
+        //     console.log("inside if")
+        // }else{
+        //     console.log("else")
+        // }
+        if(x==10){
+            console.log("inside if")
+        }
+
+        let percent =70
+
+        if(percent > 60 && percent <=70){
+            console.log("Distinction")
+        }else if(percent > 50 && percent <=60){
+            console.log("First Class")
+        }else if(percent >40 && percent<=50){
+            console.log("Second Class")
+        }
+        else{
+            console.log("Pass")
+        }
+        
+        
+        switch(percent){
+            case (percent>60 && percent<70):
+              console.log('distinction')
+              break;
+            case (percent>50 && percent<60):
+            console.log('firstclass')
+            break;
+            case (percent>40 && percent<50):
+            console.log('secondclass')
+            break;
+            default:
+            console.log('Pass')
+            break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest and spread - ...
+       function percent(total,english,maths,history) //parameters
+       {
+           let obtained= english+maths+history
+           let percentage = obtained/total *100;
+           console.log(percentage)
+
+       }
+       let marks = [30,60,70,50,20]
+       percent(300,...marks) //arguments
+
+     
+        
+    </script>
+</body>
+</html>

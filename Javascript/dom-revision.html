@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divOne">
+        <p id="pOne" name="pName">Paragraph</p>
+        <input type="radio" name="gender" id="male" value="M">Male 
+        <input type="radio" name="gender" id="female" value="F">Female 
+        <div id="divTwo">
+            <p>P1</p>
+            <p>P2</p>
+            <!-- div p:last-child -->
+            
+        </div>
+    </div>
+    <script>
+        //getElementById,getElementsByTagName,getElementsByClassName,
+        //getElementByName,querySelector,querySelectorAll
+
+        var firstDiv=document.getElementById("divOne")
+        firstDiv.style.background="crimson"
+
+        var p =document.getElementById('pOne')
+        p.innerHTML="Change paragraph"
+        console.log(p)
+
+        var gender = document.getElementsByName('gender')
+        
+        if(gender[0].checked){
+           var g= gender[0].value
+        }else{
+            var g=gender[1].value
+        }
+        console.log(g)
+
+
+        var innerP = document.querySelectorAll('div p')
+        innerP[1].style.fontSize="40px"
+        innerP[1].setAttribute('class','pClass')
+        console.log(innerP)
+        
+        
+    </script>
+</body>
+</html>

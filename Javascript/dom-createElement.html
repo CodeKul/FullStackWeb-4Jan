@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var div = document.createElement('div')
+        console.log(div)
+        var body =document.body
+        console.log(body)
+        div.innerHTML="Inside Div"
+        var p = document.createElement('p')
+        p.innerHTML="Inside P"
+        div.appendChild(p)
+        
+        var ul =document.createElement('ul')
+        var li = document.createElement('li')
+        li.innerHTML="First Item"
+        var liTwo = document.createElement('li')
+        liTwo.innerHTML="<b>Second Item</b>"
+        ul.append(li)
+        ul.append(liTwo)
+        div.append(ul)
+        
+
+        var input = document.createElement('input')
+        var button =document.createElement('button')
+        button.innerHTML="Add"
+        div.append(input)
+        div.append(button)
+        body.append(div)
+
+
+
+    </script>
+</body>
+</html>

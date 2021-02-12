@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="enter-item">
+    <button id="btn">Add item</button>
+    <p id="list-count"></p>
+    <script>
+        var count =0 
+        
+        var addItem = document.getElementById('btn')
+           
+        addItem.addEventListener('click',function(){
+           add()
+        })
+        addItem.addEventListener('click',function(){
+            console.log("Second Event")
+        })
+
+        function add(){
+            count++
+            
+            var inputValue = document.getElementById("enter-item").value
+            // console.log(listItem)
+            var list = document.createElement('ul')
+            var listItem =document.createElement('li')
+            listItem.innerHTML=inputValue
+            list.append(listItem)
+            document.body.append(list)
+
+            document.getElementById('enter-item').value=""
+            document.getElementById('list-count').innerHTML=count
+        }
+        
+    </script>
+</body>
+</html>

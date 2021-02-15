@@ -29,13 +29,23 @@
             // console.log(listItem)
             var list = document.createElement('ul')
             var listItem =document.createElement('li')
+            var btn = document.createElement('button')
+            btn.innerHTML="Delete"
+            btn.value="Hi"
             listItem.innerHTML=inputValue
+            listItem.appendChild(btn)
             list.append(listItem)
             document.body.append(list)
-
+            btn.addEventListener('click',function(event){
+                    var deletedItem = event.target.parentNode
+                    deletedItem.remove()
+                    console.log(deletedItem)
+            })
             document.getElementById('enter-item').value=""
             document.getElementById('list-count').innerHTML=count
         }
+
+        
         
     </script>
 </body>

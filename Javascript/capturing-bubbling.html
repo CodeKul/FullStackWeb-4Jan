@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divOne">
+        Inside Div
+        <p id="pOne">
+            Inside paragraph
+            <span id="spanOne">Inside span</span>
+        </p>
+    </div>
+    <script>
+        //All the events bubble by default
+        //addEventListener(event,function,useCapture)
+        var span =document.getElementById("spanOne")
+        span.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("span Event")
+        document.getElementById("spanOne").innerHTML="Span changed"
+        })
+        var p = document.getElementById("pOne")
+        p.addEventListener('click',function(){
+            console.log("p Event")
+        })
+
+        var div = document.getElementById("divOne")
+        div.addEventListener('click',function(){
+            console.log("Div Event")
+        })
+    </script>
+    
+</body>
+</html>

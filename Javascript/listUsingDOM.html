@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var ul = document.createElement("ul")
+        ul.setAttribute("id","drinks")
+        var li = document.createElement("li")
+        var liText = document.createTextNode("Coffee")
+        li.append(liText)
+        console.log(li)
+        var li2 =document.createElement("li")
+        var liText2 = document.createTextNode("Tea")
+        li2.appendChild(liText2)
+        ul.append(li)
+        ul.append(li2)
+
+        document.body.append(ul)
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function greet(){
+            var a =100
+            console.log("Inside greet")
+            function show(){
+                console.log(a)
+            }
+           return show
+        }
+        let result =greet()
+        result()
+        console.log(result)
+
+      
+        
+
+        function calculate(salary){
+             var salary = 50000
+            function changeSalary(amt){
+
+               salary +=amt
+                console.log(salary)
+            }
+
+            return{
+                setIncrement:function(amt){
+                    changeSalary(amt)
+                },
+                getSalary:function() {
+                    return salary
+                }
+            }
+        }
+
+        let obj =calculate(40000)
+        obj.setIncrement(5000)
+       
+       
+    </script>
+</body>
+</html>

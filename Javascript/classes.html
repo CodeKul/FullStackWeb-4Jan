@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,address){
+                this.name=name
+                this.address=address
+            }
+
+        }
+      
+        class Employee extends Person
+        {
+            empNo=100
+            constructor(empCity,companyName){
+                super("abc","Kothrud Depot")
+               this.empCity=empCity
+                this.companyName=companyName
+
+            }
+            
+            getEmpInfo(){
+                console.log(this.empNo)
+                console.log(this.empCity,this.companyName,this.name)
+            }
+
+        }
+        let abc = new Employee("Pune","xyz")
+      console.log(abc)
+        abc.getEmpInfo()
+        let john = new Employee("john","Mumbai")
+        console.log(john)
+
+        
+
+
+        let emp ={
+            empName:"X",
+            empCity:"Pune"
+        }
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let promise = new Promise(function(resolve,reject){
+            var x =101
+            if(x === 100){
+                resolve(x)
+            }else{
+                reject("Failed")
+            }
+
+        })
+        promise.then(
+            function(x){
+                x = x+300
+                return x
+            }
+        )
+        .then(function(x){
+            console.log(x)
+        })
+        .catch(
+            function(msg){
+           console.log(msg) 
+            }
+        )
+
+        isActive = true
+        var showEmployeeData = new Promise(
+            function(resolve,reject){
+                
+                if(isActive){
+                    var employee = {
+                    firstName:"John",
+                    city:"Pune"
+                    }
+                    resolve(employee)
+                }
+                else{
+                    reject("Inactive Employee")
+                }
+            }
+        )
+
+        var displayData =function(){
+            showEmployeeData.then(
+                function(employee){
+                    console.log(employee)
+                }
+            )
+            .catch(
+                function(errMsg){
+                console.log(errMsg)
+                }
+            )
+        }
+
+        displayData()
+
+
+
+    </script>
+</body>
+</html>

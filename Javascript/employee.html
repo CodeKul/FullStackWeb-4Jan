@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="userid" placeholder="Enter userId"><br><br>
+        <input type="number" id ="empid" placeholder="Enter id"><br><br>
+        <input type="text" id="title" placeholder="Enter title"><br><br>
+        <input type="checkbox" id="complete" value="Completed">
+        <label for="complete">Completed</label><br><br>
+        <button type="button" onclick="displayData()">Submit</button>
+    </form>
+
+    <script>
+        function displayData(){
+        let userId =document.getElementById("userid").value
+        let empId =document.getElementById("empid").value
+        let title =document.getElementById("title").value
+        let completed
+        if(document.getElementById("complete").checked)
+        {
+             completed=document.getElementById("complete").value
+        }else{
+            completed = document.getElementById("complete").value = "Not Completed"
+        }   
+
+        console.log("User Id:"+userId)
+        console.log("Employee Id:"+empId)
+        console.log("Title:"+title)
+        console.log("Completed:"+completed)
+    }
+    </script>
+</body>
+</html>

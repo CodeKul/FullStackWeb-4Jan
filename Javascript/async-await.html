@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiply(a,b){
+            console.log("Inside multiply")
+            let result =0 
+            let p =new Promise(function(resolve,reject){
+                result=a*b
+                if(result<100){
+                    resolve(result)
+                }else{
+                    reject("Invalid output")
+                }
+            })
+            return p
+        }
+
+        function display(response){
+            console.log(response)
+        }
+
+        async function getResult(){
+            try{
+            let output = await multiply(10,10)
+            display(output)
+            }catch(err){
+                console.log(err)
+            }
+
+        }
+
+        getResult()
+        
+    </script>
+</body>
+</html>

@@ -13,27 +13,17 @@
         <input type="text" id="title" placeholder="Enter title"><br><br>
         <input type="checkbox" id="complete" value="Completed">
         <label for="complete">Completed</label><br><br>
-        <button type="button" onclick="displayData()">Submit</button>
+        <select id="cities">
+            <option value=""></option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+        <button type="button" onclick="sendData()">Submit</button>
+        <button type="button" onclick="getData()">Get Data</button>
     </form>
 
-    <script>
-        function displayData(){
-        let userId =document.getElementById("userid").value
-        let empId =document.getElementById("empid").value
-        let title =document.getElementById("title").value
-        let completed
-        if(document.getElementById("complete").checked)
-        {
-             completed=document.getElementById("complete").value
-        }else{
-            completed = document.getElementById("complete").value = "Not Completed"
-        }   
-
-        console.log("User Id:"+userId)
-        console.log("Employee Id:"+empId)
-        console.log("Title:"+title)
-        console.log("Completed:"+completed)
-    }
+    <script src="xmlHttp.js">
+       
     </script>
 </body>
 </html>

@@ -50,6 +50,8 @@ function getData() {
   xmlHttp.onload = function () {
     if (xmlHttp.status == 200) {
       console.log(xmlHttp.response);
+      let output = xmlHttp.response;
+      
     }
   };
 }

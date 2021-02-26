@@ -25,7 +25,51 @@ function getUserData() {
 function sendData() {
   let userData = getUserData();
   console.log(userData);
-  
+  let xhr = new XMLHttpRequest();
+  console.log(xhr);
+
+  xhr.open("POST", "https://jsonplaceholder.typicode.com/posts");
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.send(JSON.stringify(userData));
+  xhr.onload = function () {
+    if (xhr.status == 201) {
+      console.log(xhr.response);
+    } else {
+      console.log("Response status code:" + xhr.status);
+    }
+  };
+
+  xhr.onerror = function () {
+    console.log("Network Error");
+  };
+}
+function getData() {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.send();
+  xhr.onload = function () {
+    if (xhr.status == 200) {
+      console.log(xhr.response);
+      let result = JSON.parse(xhr.response);
+      console.log(typeof result);
+      let tbl;
+      result.map((element) => {
+        tbl =
+          tbl +
+          `<tr>
+              <td>${element.id}</td>
+              <td>${element.userId}</td>
+              <td>${element.body}</td>
+              <td>${element.title}</td>
+          </tr>`;
+      });
+      document.getElementById("data").innerHTML = tbl;
+    }
+  };
+  xhr.onerror = function () {
+    console.log("Network Error");
+  };
 }
 
 // let hobby = document.getElementsByClassName("hobbies");

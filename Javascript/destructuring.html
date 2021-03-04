@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person ={
+            firstName:'abc',
+            age:30,
+            city:'Pune',
+            skills:['c','c++'],
+            address:{
+                street:'Fairhill'
+            }
+
+        }
+        //nested objects in destructuring
+       
+        let{address:{street}}=person
+        console.log(street)
+        
+        
+        //let age = person.age
+
+        //let {firstName,city1,age1}=person
+        //console.log(firstName)
+        //console.log(age1)
+        //console.log(city1)
+
+        //alias
+        //let {firstName,age:personAge,city:personCity}=person
+        //console.log(personAge)
+
+        //let{firstName,age=90,city}=person
+
+        let {firstName,age,...rest}=person
+        console.log(firstName,age,rest)
+
+       
+
+
+        //array destructuring
+        let numbers=[10,40,50,80,20,100]
+
+        // let numbers=[10,40,100]
+        
+        //let [x,,y,,z]=numbers
+        // let [x,y,z=30]=numbers
+        // console.log(x,y,z)
+
+        let [a,b,...c]=numbers
+
+        console.log(a,b,c)
+
+
+        function operations(num1,num2){
+            return [num1+num2,num1*num2]
+        }
+        // let result =operations(4,6)
+       let [addition,multiplication]=  operations(10,30)
+       console.log(addition,multiplication)
+
+
+       let emp={
+        firstName:'abc',
+            age:30,
+            city:'Pune'
+       }
+       function display({firstName,city}){
+           console.log(firstName,city)
+       }
+       display(emp)
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
